@@ -1,0 +1,45 @@
+
+//==========  List styles  ==========//
+
+// list item styles
+%default-list {
+	margin: 0 0 $paragraph-margin;
+}
+
+%default-ul {
+	list-style: disc;
+	@extend %default-list;
+}
+
+%default-ol {
+	list-style: decimal;
+	@extend %default-list;
+}
+
+// list item reset
+%reset-ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+//==========  Buttons and default styles  ==========//
+
+// base button styles
+// extend for different button styles
+%button {
+	display: inline-block;
+	padding: ($block-padding * 1/3) $block-padding;
+	border: none;
+	@include if($border-radius, ( border-radius : $border-radius ));
+	background: $color-primary;
+	color: $color-white;
+	text-align: center;
+
+	&:hover {
+		color: $color-white;
+		background: $color-secondary;
+	}
+}
+
